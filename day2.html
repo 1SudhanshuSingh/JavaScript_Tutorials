@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Operators on Array
+      let fruit = ["apple", "banana", "orange"];
+      console.log(fruit.length); //To find number of elements in array
+      //Push
+      fruit.push("Cheeku");
+      console.log(fruit);
+      //Unshift
+      fruit.unshift("Mango");
+      console.log(fruit);
+      //Pop
+      fruit.pop(); //return array
+      console.log(fruit);
+      //Shift
+      fruit.shift();
+      console.log(fruit);
+      //Slice
+      let remainFruit = fruit.slice(3);
+      console.log(remainFruit);
+      //Splice;
+      fruit.splice(1);
+      console.log(fruit);
+      //Arithmatic
+      let add = 2 + 3;
+      let sub = 5 - 1;
+      let mul = 2 * 10;
+      let division = 10 / 5;
+      console.log(add, sub, mul, division);
+      //Remainder %
+      let modulas = 10 % 3;
+      console.log(modulas);
+      //contactination
+      let firstName = "Sudhanshu";
+      let lastName = "Singh";
+      console.log(firstName + lastName);
+      let a = "Aman";
+      let bString = 2;
+      console.log(a + bString); //Concatination
+      let numberA = 5;
+      let numberB = "6";
+      console.log(numberA + numberB);
+      let booleanA = false; //false 0 true 1
+      let booleanString = 2;
+      console.log(booleanA + booleanString);
+      //NaN (not a number)
+      let num1 = 2;
+      let str1 = "Strings";
+      console.log(num1 * str1);
+      //Assignment operator
+      let comicBook1 = "Spiderman";
+      let comicBook2 = comicBook1;
+      console.log(comicBook2);
+      let anumber1 = 5;
+      //   anumber1 = anumber1 - 3;
+      anumber1--; //decrement
+      //   anumber1 = anumber1 + 1;
+      anumber1++; //increment
+      console.log(anumber1);
+      //SHORTHAND FOR ABOVE
+      // anumber1 -= 3;
+      // anumber1 += 3;
+      // anumber1 *= 3;
+      // anumber1 /= 3;
+
+      //ASSIGNMENTS
+      //1. ["delhi", "mumbai"] add Chennai to this array in the begining 
+      //2. [3,4,5,6] add 1 and 2 to this array in the begining
+      //3. [3,4,5,6] remove last item of the array
+      //4. [1,2,3,4,5] remove first item of the array
+      //5. [1,23,4,34,55,66,77,123,22] find the number of items in array
+      //6. take two variables firstName and lastName and print the full name with space in between
+    </script>
+  </body>
+</html>
