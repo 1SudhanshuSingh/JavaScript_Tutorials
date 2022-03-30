@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Store return value of function in a variable
+      //     function add(a,b){
+      //         return a + b;
+      //     }
+      //    let sum = add(2,3);
+      //    console.log(sum);
+
+      //Use one function in another function
+
+      function printName(fname, lname) {
+        return fname + " " + lname;
+      }
+      function greeting(message) {
+        return printName("Rohit", "Kumar") + "\n" + message; //\n is for line break
+      }
+
+      console.log(greeting("Welcome to the world of Javascript"));
+
+      //Named vs Anonymous functions
+      //Named Fn
+      function namedFn() {
+        consol.log("I am a named function");
+      }
+      //Anonymous Fn
+      let anonymousFn = function () {
+        console.log("I am an anonymous function");
+      };
+      anonymousFn();
+      (function () {
+        console.log("Anonymous function"); //Immediately invoked function execution IIFE
+      })();
+      //Use case of anonymous function
+      setTimeout(function () {
+        console.log("I am a timer");
+      }, 5000);
+    </script>
+  </body>
+</html>
