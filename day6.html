@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .modal {
+        border: 1px solid salmon;
+        width: 60%;
+        margin: 0 auto;
+        position: fixed;
+        background-color: white;
+      }
+      .wrapper {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-header {
+        padding: 1rem;
+        background-color: salmon;
+        color: #fff;
+      }
+      .modal-body,
+      .modal-footer {
+        padding: 1rem;
+      }
+      .modal-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn {
+        background-color: salmon;
+        outline: none;
+        border: 0;
+        padding: 5px 10px;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .none {
+        display: none;
+      }
+      .fadedBlack {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button id="clickMe">Click Me</button>
+      <div class="modal none">
+        <div class="modal-header">
+          <p>Sorry for inconvinience</p>
+        </div>
+        <div class="modal-body">
+          <p>Sorry! This is an error</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn">Close</button>
+          <button class="btn">Submit Error Log</button>
+        </div>
+      </div>
+    </div>
+    <!-- <p id="thisPara">Hello There</p>
+    <button id="clickBtn">Click Me</button>
+    <button name="nameOfBtn">Yay</button>
+    <button name="nameOfBtn">Yay</button>
+    <button name="nameOfBtn">Yay</button>
+    <button name="nameOfBtn">Yay</button>
+    <button name="nameOfBtn">Yay</button>
+    <button class="myBtn">Class Button</button>
+    <button class="myBtn">Class Button</button> -->
+    <script>
+      document.getElementById("clickMe").addEventListener("click", function () {
+        document.querySelector(".wrapper").classList.add("fadedBlack");
+        document.querySelector(".modal").classList.remove("none");
+      });
+      document.querySelector(".btn").addEventListener("click", function () {
+        document.querySelector(".wrapper").classList.remove("fadedBlack");
+        document.querySelector(".modal").classList.add("none");
+      });
+      //Get the HTML Element
+      //getElementById
+      //   const btn = document.getElementById("clickBtn");
+      //   //Add Event Listener
+      //   //Click is an event defined by DOM
+      //   btn.addEventListener("click", function () {
+      //     alert("Its me");
+      //   });
+      //   //getElementByName
+      //   const nameBtn = document.getElementsByName("nameOfBtn")[2];
+      //   nameBtn.addEventListener("click", function () {
+      //     alert("Its the third button");
+      //   });
+      //   console.log(nameBtn);
+      //Query Selector - CSS Selector
+      //   const btn = document.querySelector(".myBtn");
+      //   console.log(btn);
+      //   //Create Element
+      //   const para = document.createElement("p"); // CREATED ELEMENT
+      //   para.innerHTML = "<span>I am made by JS</span>"; // ADDED TEXT TO ELEMENT
+      //   document.getElementsByTagName("BODY")[0].appendChild(para); //APPEND PARA TO BODY
+      //   //DOM CSS
+      //   document.getElementById("clickBtn").addEventListener("click", function(){
+      //     document.getElementsByTagName("BODY")[0].style.backgroundColor = "blue";
+      //   });
+      //CLASSLIST
+      document
+        .getElementById("clickBtn")
+        .addEventListener("click", function () {
+          document.getElementById("thisPara").classList.add("active"); //to add Class
+        });
+    </script>
+  </body>
+</html>
