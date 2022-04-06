@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+            padding: 1rem;
+            color: aliceblue;
+        }
+        .blue{
+            background-color: blue;
+            padding: 1rem;
+            color: aliceblue;
+        }
+    </style>
+  </head>
+  <body>
+    <script>
+      //DOM PROJECTS
+      //1. Form Validation
+      //2. DropDown Menu
+      //3. DIGITAL CLOCK
+      //4. TO DO LIST
+      //5. STONE PAPER SCISSOR GAME
+
+      //TEMPLATE LITERALS
+      const me = {
+        name: "Sudhanshu",
+        age: 35,
+        handsome: false,
+      };
+      const listItem = `
+      <ul>
+        <li>${me.name}</li>
+        <li>${me.age}</li>
+        <li>${me.handsome ? "I am handsome" : "I am not handsome"}</li>
+        </ul>
+      `;
+      const container = `
+      <div class="${me.handsome ? 'red' : 'blue'}">
+        ${listItem}
+        </div>
+      `;
+      document.body.innerHTML = container;
+      const str =
+        "My name is " + me.name + " and I am " + me.age + " years old.";
+      const tempLitStr = `My name is ${me.name} and I am ${me.age} years old. ${
+        me.handsome ? "I am handsome" : "I am not handsome"
+      }`;
+      console.log(tempLitStr);
+    </script>
+  </body>
+</html>
